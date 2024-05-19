@@ -1,8 +1,10 @@
 import java.util.Arrays;
 import java.util.Scanner;
+import java.*;
 
 public class matix {
     public static void main(String[] args){
+
         Scanner sc =  new Scanner(System.in);
         System.out.println("please enter columns and rows");
         int colum = sc.nextInt();

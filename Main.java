@@ -1,15 +1,36 @@
 
+import Models.DataStructure;
 import Models.Subject;
 import Models.School;
 import Models.matricsdiagonals;
 
 import java.util.Arrays;
+
 import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalTime;
 
 
 public class Main {
+
+    public static void digiClock(){
+        while(true){
+            LocalTime t = LocalTime.now();
+            DateTimeFormatter tf = DateTimeFormatter.ofPattern("HH:mm:ss");
+            String newtime = t.format(tf);
+            System.out.println(newtime);
+            try {
+                Thread.sleep(1000);
+            } catch(Exception e) {
+                System.out.println(e);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new  Scanner(System.in);
+
 
 //        Student student = new Student();
 //        System.out.println("enter name");
@@ -76,28 +97,20 @@ public class Main {
 //              System.out.println("Less");
 //          }
 
-        String st1;
-        String st2;
+//        DataStructure.palindrome();
+//        DataStructure.fact();
 
-        System.out.println("enter first string");
-        st1 = sc.nextLine();
-        System.out.println("enter second");
-        st2 = sc.nextLine();
-
-        if(st1.length() != st2.length()){
-            System.out.println("false");
-        }
-
-        char[] carr1 = st1.toCharArray();
-        char[] carr2 = st2.toCharArray();
-
-        Arrays.sort(carr1);
-        Arrays.sort(carr2);
-
-        if(Arrays.equals(carr1,carr2)){
-            System.out.println("Anagram");
-        }
-
+//        DataStructure.armstrong();
+//        LocalDateTime l  = LocalDateTime.now();
+//        DateTimeFormatter d = DateTimeFormatter.ofPattern("hh:mm:ss");
+//        String s = l.formate(d);
+//        System.out.println(s);
+//
+//        try{
+//            Thread.sleep(1000);
+//        }catch (interruptedException e){
+//            e.printSlackTrace();
+//        }
 
     }
 }
